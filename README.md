@@ -1,6 +1,5 @@
 # Training Neural Networks without Backpropagation
-================
-
+--------------------------------------------------------
 ## Introduction
 In this work we propose a matrix factorization based alternative to train neural networks and compare it's performance with backpropagation (the traditional method to train Neural Networks) on the grounds of test/train accuracies, time taken to convergence and epochs run before convergence. We use 10 regression and 10 classification datasets (20 datasets in total) to compare the performance of the two methods on the aforementioned metrics.
 
@@ -8,7 +7,7 @@ In this work we propose a matrix factorization based alternative to train neural
 
 ## Dependencies
 * Python (3.6.8): {Also present in requirements.txt}
-    > cycler==0.10.0, decorator==4.4.0, matplotlib==2.1.0, networkx==2.4, numpy==1.13.3, Pillow==6.2.1, pyparsing==2.4.2, python-dateutil==2.8.0, pytz==2019.3, PyWavelets==1.1.1, PyYAML==5.1.2, scikit-image==0.13.0, scikit-learn==0.19.1, scipy==0.19.1, six==1.12.0, torch==0.3.1, torchvision==0.2.0
+    > cycler==`0.10.0`, decorator==`4.4.0`, matplotlib==`2.1.0`, networkx==`2.4`, numpy==`1.13.3`, Pillow==`6.2.1`, pyparsing==`2.4.2`, python-dateutil==`2.8.0`, pytz==`2019.3`, PyWavelets==`1.1.1`, PyYAML==`5.1.2`, scikit-image==`0.13.0`, scikit-learn==`0.19.1`, scipy==`0.19.1`, six==`1.12.0`, torch==`0.3.1`, torchvision==`0.2.0`
 
 ## Contents
 * `scripts/` - contains all the relevant scripts to run the experiment.
@@ -37,14 +36,14 @@ usage: backprop_implementation.py [-h] [--log_directory LOG_DIRECTORY]
 
 optional arguments:
   -h, --help                                            # show this help message and exit
-  --log_directory log_directory 	                    # destination directory to save the training logs
-  --log_file LOG_FILE 				                    # text filename to save training logs
+  --log_directory log_directory 	                # destination directory to save the training logs
+  --log_file LOG_FILE 				        # text filename to save training logs
   --plot_directory PLOT_DIRECTORY                       # destination directory to save the loss vs epoch plots
   --plot_file PLOT_FILE                                 # .png filename to save the loss vs epoch plots
   --dataset DATASET                                     # dataset to run the script on
   --max_epoch MAX_EPOCH                                 # flag to indicate the maximum epochs for training
   --initial_learning_rate INITIAL_LEARNING_RATE         # starting learning rate
-  --threshold THRESHOLD                                 # less than threshold value change in subsequent losses                       implies convergence
+  --threshold THRESHOLD                                 # less than threshold value change in subsequent losses implies convergence
   --hidden_units HIDDEN_UNITS                           # number of units in the hidden layer of the neural network
   --is_classification IS_CLASSIFICATION                 # Boolean to indicate if the problem at hand is a classification problem.
 
@@ -62,13 +61,13 @@ usage: matrix_factorization_implementation.py [-h]
 
 optional arguments:
   -h, --help                                            # show this help message and exit
-  --log_directory log_directory 	                    # destination directory to save the training logs
-  --log_file LOG_FILE 				                    # text filename to save training logs
+  --log_directory log_directory 	                # destination directory to save the training logs
+  --log_file LOG_FILE 				        # text filename to save training logs
   --plot_directory PLOT_DIRECTORY                       # destination directory to save the loss vs epoch plots
   --plot_file PLOT_FILE                                 # .png filename to save the loss vs epoch plots
   --dataset DATASET                                     # dataset to run the script on
   --max_epoch MAX_EPOCH                                 # flag to indicate the maximum epochs for training
-  --threshold THRESHOLD                                 # less than threshold value change in subsequent losses                       implies convergence
+  --threshold THRESHOLD                                 # less than threshold value change in subsequent losses implies convergence
   --hidden_units HIDDEN_UNITS                           # number of units in the hidden layer of the neural network
   --is_classification IS_CLASSIFICATION                 # Boolean to indicate if the problem at hand is a classification problem.
   --mu MU                                               # hyper-parameter value
