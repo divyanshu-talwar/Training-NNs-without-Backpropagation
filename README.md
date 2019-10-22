@@ -24,9 +24,9 @@ _**Note:** All the aforementioned dependencies can be easily installed by execut
 
 ## Results
 * Regression datasets:
-	![regression_results](results/Regression_results.pdf)
+	![regression_results](results/Regression_accuracies.png)
 * Classification datasets:
-	![classification_results](results/Classification_results.pdf)
+	![classification_results](results/Classification_accuracies.png)
 * Plots:
 	* [Backpropagation](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/backpropagation/plots)
 	* [Matrix Factorization](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/matrix_factorization/plots)
