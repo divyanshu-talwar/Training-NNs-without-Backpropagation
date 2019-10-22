@@ -1,7 +1,7 @@
 # Training Neural Networks without Backpropagation
---------------------------------------------------------
+
 ## Introduction
-In this work we propose a matrix factorization based alternative to train neural networks and compare it's performance with backpropagation (the traditional method to train Neural Networks) on the grounds of test/train accuracies, time taken to convergence and epochs run before convergence. We use 10 regression and 10 classification datasets (20 datasets in total) to compare the performance of the two methods on the aforementioned metrics.
+In this work we propose a matrix factorization based alternative to train neural networks and compare it's performance with backpropagation (the traditional method to train Neural Networks) on the grounds of test/train accuracies, time to convergence and epochs run before convergence. We use 10 regression and 10 classification datasets (20 datasets in total) to compare the performance of the two methods on the aforementioned metrics.
 
 -	For technical issues, please report to the [Issues](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/issues) section.
 
