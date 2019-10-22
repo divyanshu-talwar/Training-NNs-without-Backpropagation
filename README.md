@@ -6,8 +6,12 @@ In this work we propose a matrix factorization based alternative to train neural
 -	For technical issues, please report to the [Issues](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/issues) section.
 
 ## Dependencies
-* Python (3.6.8): {Also present in requirements.txt}
+* Python (3.6.8):
     > cycler==`0.10.0`, decorator==`4.4.0`, matplotlib==`2.1.0`, networkx==`2.4`, numpy==`1.13.3`, Pillow==`6.2.1`, pyparsing==`2.4.2`, python-dateutil==`2.8.0`, pytz==`2019.3`, PyWavelets==`1.1.1`, PyYAML==`5.1.2`, scikit-image==`0.13.0`, scikit-learn==`0.19.1`, scipy==`0.19.1`, six==`1.12.0`, torch==`0.3.1`, torchvision==`0.2.0`
+
+_**Note:** All the aforementioned dependencies can be easily installed by executing the following command:_
+
+`pip install -r requirements.txt`
 
 ## Contents
 * `scripts/` - contains all the relevant scripts to run the experiment.
@@ -18,9 +22,22 @@ In this work we propose a matrix factorization based alternative to train neural
 * `datasets` - contains the `classification` and `regression` datasets downloaded from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets.php?format=&task=reg&att=num&area=&numAtt=&numIns=greater1000&type=&sort=nameUp&view=table).
 * `results/` - contains the training `logs` and loss vs epoch `plots` for both the approaches.
 
+## Results
+* Regression datasets:
+	![regression_results](Regression_results.pdf)
+* Classification datasets:
+	![classification_results](Classification_results.pdf)
+* Plots:
+	* [Backpropagation](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/backpropagation/plots)
+	* [Matrix Factorization](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/matrix_factorization/plots)
+* Training Logs:
+	* [Backpropagation](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/backpropagation/logs)
+	* [Matrix Factorization](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/matrix_factorization/logs)
+
 ## Execution
 * To run the experiment, first the necessary requirements using the requirements.txt :
-	* `pip install -r requirements.txt`
+
+`pip install -r requirements.txt`
 
 ```
 Options :
@@ -73,11 +90,11 @@ optional arguments:
   --mu MU                                               # hyper-parameter value
 
 ```
-_**Note:** If you use any other dataset apart from the ones in here add the dataset to the datasets folder, write it's corresponding loader in `read_datasets.py` and run either/both the scripts by using the following command:
-`python <scipt-name> --dataset <dataset_name> --is_classification {True, False}`._
+_**Note:** If you use any other dataset apart from the ones in here add the dataset to the datasets folder, write it's corresponding loader in `read_datasets.py` and run either/both the scripts by using the following command:_
 
-* Refer `scripts/runall.sh` to know more about how to use the command line parameters.
-* To run all the experiments and to reproduce the simply execute `scripts/runall.sh` by using the following command:
+`python <scipt-name> --dataset <dataset_name> --is_classification {True, False}`
+
+* To run all the experiments and to reproduce the results simply execute `scripts/runall.sh` by using the following command:
 ```bash
 bash runall.sh
 ```
