@@ -23,10 +23,8 @@ _**Note:** All the aforementioned dependencies can be easily installed by execut
 * `results/` - contains the training `logs` and loss vs epoch `plots` for both the approaches.
 
 ## Results
-* Regression datasets:
-	<div style="width:75%">![regression_results](results/Regression_accuracies.png)</div>
-* Classification datasets:
-	<div style="width:75%">![classification_results](results/Classification_accuracies.png)</div>
+* [Regression datasets](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/blob/master/results/Regression_accuracies.png)
+* [Classification datasets](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/blob/master/results/Classification_accuracies.png)
 * Plots:
 	* [Backpropagation](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/backpropagation/plots)
 	* [Matrix Factorization](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/matrix_factorization/plots)
