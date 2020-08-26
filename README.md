@@ -1,7 +1,7 @@
 # Training Neural Networks without Backpropagation
 
 ## Introduction
-In this work we propose a matrix factorization based alternative to train neural networks and compare it's performance with backpropagation (the traditional method to train Neural Networks) on the grounds of test/train accuracies, time to convergence and epochs run before convergence. We use 10 regression and 10 classification datasets (20 datasets in total) to compare the performance of the two methods on the aforementioned metrics.
+In this work we train neural networks by solving an optimization problem where the different layers are separated by variable splitting technique and the ensuing sub-problems are solved using alternating direction method of multipliers (ADMM). The performance of this optimization based alternative is compared with backpropagation (the traditional method to train neural networks) on the grounds of test/train accuracies, time to convergence and epochs run before convergence. We use 10 regression and 10 classification datasets (20 datasets in total) to compare the performance of the two methods on the aforementioned metrics.
 
 -	For technical issues, please report to the [Issues](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/issues) section.
 
@@ -16,15 +16,16 @@ _**Note:** All the aforementioned dependencies can be easily installed by execut
 ## Contents
 * `scripts/` - contains all the relevant scripts to run the experiment.
 	* `scripts/backprop_implementation.py` - implementation of backpropagation based training.
-	* `scripts/matrix_factorization_implementation.py` - implementation of our matrix factorization based training.
+	* `scripts/matrix_factorization_implementation.py` - implementation of ADMM based training.
 	* `scripts/read_datasets.py` - contains classes for reading the datasets
 	* `scripts/runall.sh` - bash script to run all the experiments mentioned in the paper.
 * `datasets` - contains the `classification` and `regression` datasets downloaded from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets.php?format=&task=reg&att=num&area=&numAtt=&numIns=greater1000&type=&sort=nameUp&view=table).
 * `results/` - contains the training `logs` and loss vs epoch `plots` for both the approaches.
 
 ## Results
-* [Regression datasets](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/blob/master/results/Regression_accuracies.png)
-* [Classification datasets](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/blob/master/results/Classification_accuracies.png)
+* Accuracies:
+	* [Regression datasets](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/blob/master/results/Regression_accuracies.png)
+	* [Classification datasets](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/blob/master/results/Classification_accuracies.png)
 * Plots:
 	* [Backpropagation](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/backpropagation/plots)
 	* [Matrix Factorization](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/matrix_factorization/plots)
@@ -33,7 +34,7 @@ _**Note:** All the aforementioned dependencies can be easily installed by execut
 	* [Matrix Factorization](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/matrix_factorization/logs)
 
 ## Execution
-* To run the experiment, first the necessary requirements using the requirements.txt :
+* Installing the requirements is a pre-requisite to running the experiment. This can be achieved by using the following command:
 
 `pip install -r requirements.txt`
 
