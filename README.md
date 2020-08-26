@@ -1,7 +1,7 @@
 # Training Neural Networks without Backpropagation
 
 ## Introduction
-In this work we train neural networks by solving an optimization problem where the different layers are separated by variable splitting technique and the ensuing sub-problems are solved using alternating direction method of multipliers (ADMM). The performance of this optimization based alternative is compared with backpropagation (the traditional method to train neural networks) on the grounds of test/train accuracies, time to convergence and epochs run before convergence. We use 10 regression and 10 classification datasets (20 datasets in total) to compare the performance of the two methods on the aforementioned metrics.
+In this work we train neural networks by solving an optimization problem where the different layers are separated by variable splitting technique and the ensuing sub-problems are solved using alternating direction method of multipliers (ADMM). The performance of this optimization based alternative is compared with backpropagation (the traditional method to train neural networks) on the grounds of test/train accuracies, time to convergence and epochs run before convergence. We run our experiments on 10 regression and 10 classification datasets (20 datasets in total).
 
 -	For technical issues, please report to the [Issues](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/issues) section.
 
