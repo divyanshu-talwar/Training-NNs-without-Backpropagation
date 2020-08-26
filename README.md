@@ -20,12 +20,12 @@ _**Note:** All the aforementioned dependencies can be easily installed by execut
 	* `scripts/read_datasets.py` - contains classes for reading the datasets
 	* `scripts/runall.sh` - bash script to run all the experiments mentioned in the paper.
 * `datasets` - contains the `classification` and `regression` datasets downloaded from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets.php?format=&task=reg&att=num&area=&numAtt=&numIns=greater1000&type=&sort=nameUp&view=table).
-* `results/` - contains the training `logs` and loss vs epoch `plots` for both the approaches.
+* `results/` - contains the accuracy comparision, training `logs` and loss vs epoch `plots` for both the approaches.
 
 ## Results
 * Accuracies:
-	* [Regression datasets](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/blob/master/results/Regression_accuracies.png)
-	* [Classification datasets](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/blob/master/results/Classification_accuracies.png)
+	* [Regression datasets](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/blob/master/results/regression_accuracies.pdf)
+	* [Classification datasets](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/blob/master/results/classification_accuracies.pdf)
 * Plots:
 	* [Backpropagation](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/backpropagation/plots)
 	* [ADMM based](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/admm/plots)
@@ -38,6 +38,7 @@ _**Note:** All the aforementioned dependencies can be easily installed by execut
 
 `pip install -r requirements.txt`
 
+* The following optional command-line arguments can be supplied to the scripts. For more information on these run `<script_name> -h` or `<script_name> --help`.
 ```
 Options :
 usage: backprop_implementation.py [-h] [--log_directory LOG_DIRECTORY]
@@ -50,19 +51,6 @@ usage: backprop_implementation.py [-h] [--log_directory LOG_DIRECTORY]
                                   [--hidden_units HIDDEN_UNITS]
                                   [--is_classification IS_CLASSIFICATION]
 
-optional arguments:
-  -h, --help                                            # show this help message and exit
-  --log_directory log_directory 	                # destination directory to save the training logs
-  --log_file LOG_FILE 				        # text filename to save training logs
-  --plot_directory PLOT_DIRECTORY                       # destination directory to save the loss vs epoch plots
-  --plot_file PLOT_FILE                                 # .png filename to save the loss vs epoch plots
-  --dataset DATASET                                     # dataset to run the script on
-  --max_epoch MAX_EPOCH                                 # flag to indicate the maximum epochs for training
-  --initial_learning_rate INITIAL_LEARNING_RATE         # starting learning rate
-  --threshold THRESHOLD                                 # less than threshold value change in subsequent losses implies convergence
-  --hidden_units HIDDEN_UNITS                           # number of units in the hidden layer of the neural network
-  --is_classification IS_CLASSIFICATION                 # Boolean to indicate if the problem at hand is a classification problem.
-
 usage: admm_implementation.py [-h]
                                               [--log_directory LOG_DIRECTORY]
                                               [--log_file LOG_FILE]
@@ -74,19 +62,6 @@ usage: admm_implementation.py [-h]
                                               [--hidden_units HIDDEN_UNITS]
                                               [--is_classification IS_CLASSIFICATION]
                                               [--mu MU]
-
-optional arguments:
-  -h, --help                                            # show this help message and exit
-  --log_directory log_directory 	                # destination directory to save the training logs
-  --log_file LOG_FILE 				        # text filename to save training logs
-  --plot_directory PLOT_DIRECTORY                       # destination directory to save the loss vs epoch plots
-  --plot_file PLOT_FILE                                 # .png filename to save the loss vs epoch plots
-  --dataset DATASET                                     # dataset to run the script on
-  --max_epoch MAX_EPOCH                                 # flag to indicate the maximum epochs for training
-  --threshold THRESHOLD                                 # less than threshold value change in subsequent losses implies convergence
-  --hidden_units HIDDEN_UNITS                           # number of units in the hidden layer of the neural network
-  --is_classification IS_CLASSIFICATION                 # Boolean to indicate if the problem at hand is a classification problem.
-  --mu MU                                               # hyper-parameter value
 
 ```
 _**Note:** If you use any other dataset apart from the ones in here add the dataset to the datasets folder, write it's corresponding loader in `read_datasets.py` and run either/both the scripts by using the following command:_
