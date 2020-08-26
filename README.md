@@ -20,7 +20,7 @@ _**Note:** All the aforementioned dependencies can be easily installed by execut
 	* `scripts/read_datasets.py` - contains classes for reading the datasets
 	* `scripts/runall.sh` - bash script to run all the experiments mentioned in the paper.
 * `datasets` - contains the `classification` and `regression` datasets downloaded from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets.php?format=&task=reg&att=num&area=&numAtt=&numIns=greater1000&type=&sort=nameUp&view=table).
-* `results/` - contains the accuracy comparision, training `logs` and loss vs epoch `plots` for both the approaches.
+* `results/` - contains the `accuracies`, training `logs` and loss vs epoch `plots` for both the approaches.
 
 ## Results
 * Accuracies:
