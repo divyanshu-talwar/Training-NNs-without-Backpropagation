@@ -40,8 +40,8 @@ _**Note:** All the aforementioned dependencies can be easily installed by execut
 
 * The following optional command-line arguments can be supplied to the scripts. For more information on these run `<script_name> -h` or `<script_name> --help`.
 ```
-Options :
-usage: backprop_implementation.py [-h] [--log_directory LOG_DIRECTORY]
+       <script_name>				<arguments>
+ backprop_implementation.py	  [-h] [--log_directory LOG_DIRECTORY]
                                   [--log_file LOG_FILE]
                                   [--plot_directory PLOT_DIRECTORY]
                                   [--plot_file PLOT_FILE] [--dataset DATASET]
@@ -51,17 +51,16 @@ usage: backprop_implementation.py [-h] [--log_directory LOG_DIRECTORY]
                                   [--hidden_units HIDDEN_UNITS]
                                   [--is_classification IS_CLASSIFICATION]
 
-usage: admm_implementation.py [-h]
-                                              [--log_directory LOG_DIRECTORY]
-                                              [--log_file LOG_FILE]
-                                              [--plot_directory PLOT_DIRECTORY]
-                                              [--plot_file PLOT_FILE]
-                                              [--dataset DATASET]
-                                              [--max_epoch MAX_EPOCH]
-                                              [--threshold THRESHOLD]
-                                              [--hidden_units HIDDEN_UNITS]
-                                              [--is_classification IS_CLASSIFICATION]
-                                              [--mu MU]
+ admm_implementation.py 	` [-h][--log_directory LOG_DIRECTORY]
+                              	  [--log_file LOG_FILE]
+                              	  [--plot_directory PLOT_DIRECTORY]
+                              	  [--plot_file PLOT_FILE]
+                              	  [--dataset DATASET]
+                              	  [--max_epoch MAX_EPOCH]
+                              	  [--threshold THRESHOLD]
+                              	  [--hidden_units HIDDEN_UNITS]
+                              	  [--is_classification IS_CLASSIFICATION]
+                              	  [--mu MU]
 
 ```
 _**Note:** If you use any other dataset apart from the ones in here add the dataset to the datasets folder, write it's corresponding loader in `read_datasets.py` and run either/both the scripts by using the following command:_
