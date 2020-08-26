@@ -19,10 +19,10 @@ plt.switch_backend('agg')
 torch.manual_seed(42)
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--log_directory', type=str, default='../results/matrix_factorization/logs', help="destination directory to save the training logs")
-parser.add_argument('--log_file', type=str, default='boston_backprop.log', help="text filename to save training logs")
-parser.add_argument('--plot_directory', type=str, default='../results/matrix_factorization/plots', help="destination directory to save the loss vs iteration plots")
-parser.add_argument('--plot_file', type=str, default='boston_backprop.png', help=".png filename to save the loss vs iteration plots")
+parser.add_argument('--log_directory', type=str, default='../results/admm/logs', help="destination directory to save the training logs")
+parser.add_argument('--log_file', type=str, default='boston_admm.log', help="text filename to save training logs")
+parser.add_argument('--plot_directory', type=str, default='../results/admm/plots', help="destination directory to save the loss vs iteration plots")
+parser.add_argument('--plot_file', type=str, default='boston_admm.png', help=".png filename to save the loss vs iteration plots")
 parser.add_argument('--dataset', type=str, default='boston', help="dataset to run the script on")
 
 parser.add_argument('--max_epoch', type=int, default=15000, help="flag to indicate the maximum epochs for training")
@@ -120,7 +120,7 @@ if FLAGS.is_classification:
 			break
 		prev_loss = loss
 	  
-		# Matrix factorization step
+		# ADMM step
 		W1 = H*np.linalg.pinv(features_train_var)
 		W2 = labels_train_var*np.linalg.pinv(H)
 		H = np.linalg.inv(W2.T*W2 + mu*np.identity(FLAGS.hidden_units)) * (W2.T*labels_train_var + mu*W1*features_train_var)
@@ -249,7 +249,7 @@ else:
 			break
 		prev_loss = loss
 	  
-		# Matrix factorization step
+		# ADMM step
 		W1 = H*np.linalg.pinv(features_train_var)
 		W2 = labels_train_var*np.linalg.pinv(H)
 		H = np.linalg.inv(W2.T*W2 + mu*np.identity(FLAGS.hidden_units)) * (W2.T*labels_train_var + mu*W1*features_train_var)

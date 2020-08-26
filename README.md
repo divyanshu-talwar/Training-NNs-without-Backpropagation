@@ -16,7 +16,7 @@ _**Note:** All the aforementioned dependencies can be easily installed by execut
 ## Contents
 * `scripts/` - contains all the relevant scripts to run the experiment.
 	* `scripts/backprop_implementation.py` - implementation of backpropagation based training.
-	* `scripts/matrix_factorization_implementation.py` - implementation of ADMM based training.
+	* `scripts/admm_implementation.py` - implementation of ADMM based training.
 	* `scripts/read_datasets.py` - contains classes for reading the datasets
 	* `scripts/runall.sh` - bash script to run all the experiments mentioned in the paper.
 * `datasets` - contains the `classification` and `regression` datasets downloaded from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets.php?format=&task=reg&att=num&area=&numAtt=&numIns=greater1000&type=&sort=nameUp&view=table).
@@ -28,10 +28,10 @@ _**Note:** All the aforementioned dependencies can be easily installed by execut
 	* [Classification datasets](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/blob/master/results/Classification_accuracies.png)
 * Plots:
 	* [Backpropagation](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/backpropagation/plots)
-	* [Matrix Factorization](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/matrix_factorization/plots)
+	* [ADMM based](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/admm/plots)
 * Training Logs:
 	* [Backpropagation](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/backpropagation/logs)
-	* [Matrix Factorization](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/matrix_factorization/logs)
+	* [ADMM based](https://github.com/divyanshu-talwar/Training-NNs-without-Backpropagation/tree/master/results/admm/logs)
 
 ## Execution
 * Installing the requirements is a pre-requisite to running the experiment. This can be achieved by using the following command:
@@ -63,7 +63,7 @@ optional arguments:
   --hidden_units HIDDEN_UNITS                           # number of units in the hidden layer of the neural network
   --is_classification IS_CLASSIFICATION                 # Boolean to indicate if the problem at hand is a classification problem.
 
-usage: matrix_factorization_implementation.py [-h]
+usage: admm_implementation.py [-h]
                                               [--log_directory LOG_DIRECTORY]
                                               [--log_file LOG_FILE]
                                               [--plot_directory PLOT_DIRECTORY]
